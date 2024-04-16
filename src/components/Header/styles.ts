@@ -105,7 +105,7 @@ export const MenuIcon = styled.div`
 `;
 
 export const MobileMenu = styled.div`
-  display: none; /* Oculta o menu lateral em telas maiores */
+  display: none;
   flex-direction: column;
   position: absolute;
   top: 5rem;
@@ -127,5 +127,5 @@ export const MobileMenu = styled.div`
 export const MobileMenuLink = styled.a`
   margin-bottom: 1rem;
   text-decoration: none;
-  color: var(--color-header); /* Adicione a cor desejada */
+  color: var(--color-header);
 `;
