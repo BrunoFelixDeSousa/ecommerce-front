@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { RiApps2Line } from "@remixicon/react";
+
 import logoSvg from "../../assets/svg/Meubel_House_Logo.svg";
 import cart from "../../assets/svg/cart.svg";
 import like from "../../assets/svg/like.svg";
@@ -14,9 +17,18 @@ import {
   NavItem,
   NavItemIcon,
   MenuOptions,
+  MobileMenu,
+  MobileMenuLink,
+  MenuIcon,
 } from "./styles";
 
 export function Header() {
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
   return (
     <>
       <Container>
@@ -48,6 +60,19 @@ export function Header() {
             <NavItemIcon src={cart} alt="carrinho" />
           </NavItem>
         </Nav>
+
+        <MenuIcon onClick={toggleMenu}>
+          <RiApps2Line size={30} />
+        </MenuIcon>
+
+        {showMenu && (
+          <MobileMenu>
+            <MobileMenuLink href="#">Home</MobileMenuLink>
+            <MobileMenuLink href="#">Shop</MobileMenuLink>
+            <MobileMenuLink href="#">About</MobileMenuLink>
+            <MobileMenuLink href="#">Contact</MobileMenuLink>
+          </MobileMenu>
+        )}
       </Container>
     </>
   );
