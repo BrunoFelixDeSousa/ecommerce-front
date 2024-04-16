@@ -1,9 +1,10 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     :root {
         --background: #FFFFFF;
         --color-header: #000000;
+        --backgroud-sencodary: #FFF3E3;
 
     }
     
@@ -38,4 +39,4 @@ export const GlobalStyle = createGlobalStyle`
     button {
         cursor: pointer;
     }
-`
+`;

@@ -1,5 +1,4 @@
 import logoSvg from "../../assets/svg/Meubel_House_Logo.svg";
-import nameLogo from "../../assets/svg/SkinClinic.svg";
 import cart from "../../assets/svg/cart.svg";
 import like from "../../assets/svg/like.svg";
 import profile from "../../assets/svg/profile.svg";
@@ -14,7 +13,7 @@ import {
   Nav,
   NavItem,
   NavItemIcon,
-  MenuOptions
+  MenuOptions,
 } from "./styles";
 
 export function Header() {
@@ -29,10 +28,10 @@ export function Header() {
         </LogoContainer>
 
         <MenuOptions>
-            <NavItem href="#">Home</NavItem>
-            <NavItem href="#">Shop</NavItem>
-            <NavItem href="#">About</NavItem>
-            <NavItem href="#">Contact</NavItem>
+          <NavItem href="#">Home</NavItem>
+          <NavItem href="#">Shop</NavItem>
+          <NavItem href="#">About</NavItem>
+          <NavItem href="#">Contact</NavItem>
         </MenuOptions>
 
         <Nav>
