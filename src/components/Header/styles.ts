@@ -1,14 +1,13 @@
 import styled from "styled-components";
 
 export const Container = styled.header`
-  height: 6.25rem;
+  height: 6rem;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   margin: 0 4rem;
-  padding: 10rem;
 
   /* border: 1px solid red; */
 `;

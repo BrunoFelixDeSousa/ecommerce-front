@@ -5,7 +5,6 @@ export const Container = styled.div`
   overflow: hidden;
   position: relative;
   background-size: cover;
-  border: 1px solid red;
 `;
 
 export const BannerImage = styled.img`
