@@ -20,3 +20,15 @@ export const Text = styled.h1`
     font-size: 1.4rem;
   }
 `;
+
+export const ContainerCard = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+  justify-content: center;
+  align-items: center;
+
+  /* @media (max-width: 768px) {
+        flex-direction: column;
+    } */
+`;
