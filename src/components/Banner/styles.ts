@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.section`
   height: 31.25rem;
   overflow: hidden;
   position: relative;
