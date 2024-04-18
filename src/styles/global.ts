@@ -36,6 +36,16 @@ export const GlobalStyle = createGlobalStyle`
     font-weight: 400;
   }
 
+  a, ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
   button {
     cursor: pointer;
   }
