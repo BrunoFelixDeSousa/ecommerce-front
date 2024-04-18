@@ -4,6 +4,8 @@ export const GlobalStyle = createGlobalStyle`
   :root {
     --background: #FFFFFF;
     --color-header: #000000;
+    --color-text: #333333;
+
     --backgroud-sencodary: #FFF3E3;
 
   }
@@ -37,14 +39,14 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   a, ul, ol {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
-a {
-  text-decoration: none;
-}
+  a {
+    text-decoration: none;
+  }
 
   button {
     cursor: pointer;
