@@ -30,7 +30,6 @@ export function Header() {
   };
 
   return (
-    <>
       <Container>
         <LogoContainer>
           <Logo src={logoSvg} alt="Logo Meubel House" />
@@ -74,6 +73,5 @@ export function Header() {
           </MobileMenu>
         )}
       </Container>
-    </>
   );
 }
