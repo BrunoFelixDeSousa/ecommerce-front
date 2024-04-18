@@ -15,6 +15,7 @@ export const Text = styled.h1`
   text-align: center;
   font-size: 2rem;
   padding-bottom: 2rem;
+  color: var(--color-text);
 
   @media (max-width: 768px) {
     font-size: 1.4rem;

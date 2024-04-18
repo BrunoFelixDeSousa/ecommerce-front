@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 // card altura 540px largura 381px
-export const Card = styled.div`
+export const Card = styled.a`
   width: 23.813rem;
   height: 33.75rem;
 
@@ -32,4 +32,10 @@ export const Text = styled.span`
   font-weight: 600;
   font-size: 1.5rem;
   text-align: center;
+  color: var(--color-text);
+
+  @media (max-width: 768px) {
+    font-weight: 600;
+    font-size: 1rem;
+  }
 `;
