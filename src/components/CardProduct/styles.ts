@@ -91,28 +91,28 @@ export const CardContent = styled.div`
   transition: opacity 0.3s ease;
 `;
 
-export const CardButton = styled.button`
-  background-color: var(--background);
-  color: var(--color-text-5);
-  border: none;
-  padding: 0.75rem 3.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  border-radius: 2px;
-  cursor: pointer;
-  margin-bottom: 1rem;
+// export const CardButton = styled.button`
+//   background-color: var(--background);
+//   color: var(--color-text-5);
+//   border: none;
+//   padding: 0.75rem 3.5rem;
+//   font-size: 1rem;
+//   font-weight: 600;
+//   border-radius: 2px;
+//   cursor: pointer;
+//   margin-bottom: 1rem;
 
-  transition: transform 0.3s ease;
+//   transition: transform 0.3s ease;
 
-  &:active {
-    transform: scale(1.1);
-  }
-`;
+//   &:active {
+//     transform: scale(1.1);
+//   }
+// `;
 
 export const CardLinks = styled.div`
   display: flex;
   flex-direction: row;
-  gap: .1rem;
+  gap: 0.1rem;
   justify-content: center;
 `;
 
@@ -129,7 +129,7 @@ export const CardLink = styled.a`
   align-items: center;
   justify-content: center;
 
-  gap: .1rem;
+  gap: 0.1rem;
 
   transition: transform 0.3s ease;
 

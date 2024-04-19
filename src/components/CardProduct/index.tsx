@@ -10,7 +10,7 @@ import {
   CardContent,
   CardLinks,
   CardLink,
-  CardButton,
+  //   CardButton,
 } from "./styles";
 
 import syltherine from "../../assets/images/syltherine.png";
@@ -19,6 +19,7 @@ import {
   RiHeartLine,
   RiShareLine,
 } from "@remixicon/react";
+import { Button } from "../Button";
 
 export function CardProduct() {
   return (
@@ -33,7 +34,8 @@ export function CardProduct() {
         </CardPrice>
       </CardInfoProduct>
       <CardContent>
-        <CardButton>See Details</CardButton>
+        {/* <CardButton>See Details</CardButton> */}
+        <Button>See Details</Button>
         <CardLinks>
           <CardLink href="#">
             <RiShareLine />
