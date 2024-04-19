@@ -6,11 +6,19 @@ import {
   CardDescriptionProduct,
   CardPrice,
   CardCashPrice,
-  CardRegularPrice
-
+  CardRegularPrice,
+  CardContent,
+  CardLinks,
+  CardLink,
+  CardButton,
 } from "./styles";
 
 import syltherine from "../../assets/images/syltherine.png";
+import {
+  RiArrowLeftRightLine,
+  RiHeartLine,
+  RiShareLine,
+} from "@remixicon/react";
 
 export function CardProduct() {
   return (
@@ -20,10 +28,27 @@ export function CardProduct() {
         <CardNameProduct>Syltherine</CardNameProduct>
         <CardDescriptionProduct>Stylish cafe chair</CardDescriptionProduct>
         <CardPrice>
-            <CardCashPrice>R$ 2.500.000</CardCashPrice>
-            <CardRegularPrice>R$ 3.500.000</CardRegularPrice>
+          <CardCashPrice>R$ 2.500.000</CardCashPrice>
+          <CardRegularPrice>R$ 3.500.000</CardRegularPrice>
         </CardPrice>
       </CardInfoProduct>
+      <CardContent>
+        <CardButton>See Details</CardButton>
+        <CardLinks>
+          <CardLink href="#">
+            <RiShareLine />
+            Share
+          </CardLink>
+          <CardLink href="#">
+            <RiArrowLeftRightLine />
+            Compare
+          </CardLink>
+          <CardLink href="#">
+            <RiHeartLine />
+            Like
+          </CardLink>
+        </CardLinks>
+      </CardContent>
     </Card>
   );
 }

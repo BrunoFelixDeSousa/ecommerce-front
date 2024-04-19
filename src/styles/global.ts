@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     --color-text-2: #3A3A3A;
     --color-text-3: #898989;
     --color-text-4: #B0B0B0;
+    --color-text-5: #B88E2F;
 
     --backgroud-sencodary: #FFF3E3;
     --backgroud-card: #F4F5F7
