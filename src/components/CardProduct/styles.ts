@@ -24,6 +24,11 @@ export const Card = styled.div`
   &:hover div {
     opacity: 1;
   }
+
+  /* @media (max-width: 768px) {
+    width: 9rem;
+    height: 14rem;
+  } */
 `;
 
 export const CardImageProduct = styled.img`

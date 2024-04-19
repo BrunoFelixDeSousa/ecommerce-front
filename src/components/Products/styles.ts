@@ -33,4 +33,9 @@ export const ContainerCard = styled.div`
 
   padding: 1rem;
   justify-content: center;
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+    padding-bottom: 2rem;
+  }
 `;
