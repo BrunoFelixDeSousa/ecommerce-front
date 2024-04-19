@@ -10,6 +10,12 @@ export const Card = styled.a`
   gap: 1rem;
   padding-bottom: 2rem;
 
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
   @media (max-width: 768px) {
     width: 10rem;
     height: 10rem;
