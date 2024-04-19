@@ -7,6 +7,7 @@ export const Container = styled.section`
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   @media (max-width: 768px) {
     margin: 2rem auto 1rem;

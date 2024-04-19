@@ -17,3 +17,9 @@ export const Button = styled.button`
     transform: scale(1.1);
   }
 `;
+
+export const ButtonWithBorder = styled(Button)`
+  border: 1px solid var(--color-text-5);
+  max-width: 15.313rem;
+  width: auto;
+`;
