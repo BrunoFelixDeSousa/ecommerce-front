@@ -39,23 +39,23 @@ export function Header() {
         </LogoContainer>
 
         <MenuOptions>
-          <NavItem href="#">Home</NavItem>
-          <NavItem href="#">Shop</NavItem>
-          <NavItem href="#">About</NavItem>
-          <NavItem href="#">Contact</NavItem>
+          <NavItem to="/">Home</NavItem>
+          <NavItem to="/shop">Shop</NavItem>
+          <NavItem to="/">About</NavItem>
+          <NavItem to="/">Contact</NavItem>
         </MenuOptions>
 
         <Nav>
-          <NavItem href="#">
+          <NavItem to="/">
             <NavItemIcon src={profile} alt="perfil" />
           </NavItem>
-          <NavItem href="#">
+          <NavItem to="/">
             <NavItemIcon src={search} alt="pesquisar" />
           </NavItem>
-          <NavItem href="#">
+          <NavItem to="/">
             <NavItemIcon src={like} alt="curtir" />
           </NavItem>
-          <NavItem href="#">
+          <NavItem to="/">
             <NavItemIcon src={cart} alt="carrinho" />
           </NavItem>
         </Nav>
@@ -66,10 +66,10 @@ export function Header() {
 
         {showMenu && (
           <MobileMenu>
-            <MobileMenuLink href="#">Home</MobileMenuLink>
-            <MobileMenuLink href="#">Shop</MobileMenuLink>
-            <MobileMenuLink href="#">About</MobileMenuLink>
-            <MobileMenuLink href="#">Contact</MobileMenuLink>
+            <MobileMenuLink to="/">Home</MobileMenuLink>
+            <MobileMenuLink to="/shop">Shop</MobileMenuLink>
+            <MobileMenuLink to="/">About</MobileMenuLink>
+            <MobileMenuLink to="/">Contact</MobileMenuLink>
           </MobileMenu>
         )}
       </Container>

@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.header`
@@ -75,7 +76,7 @@ export const Nav = styled.nav`
   }
 `;
 
-export const NavItem = styled.a`
+export const NavItem = styled(Link)`
   margin-left: 2rem;
   text-decoration: none;
 
@@ -124,7 +125,7 @@ export const MobileMenu = styled.div`
   }
 `;
 
-export const MobileMenuLink = styled.a`
+export const MobileMenuLink = styled(Link)`
   margin-bottom: 1rem;
   text-decoration: none;
   color: var(--color-header);
