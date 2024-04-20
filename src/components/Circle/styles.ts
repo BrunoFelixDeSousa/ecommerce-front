@@ -14,10 +14,10 @@ export const Container = styled.div`
 `;
 
 export const InfoCircle = styled.span`
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--background);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--background);
 `;
