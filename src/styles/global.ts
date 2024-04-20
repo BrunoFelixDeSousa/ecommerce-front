@@ -11,6 +11,7 @@ export const GlobalStyle = createGlobalStyle`
     --color-text-5: #B88E2F;
 
     --backgroud-sencodary: #FFF3E3;
+    --backgroud-info: #FAF3EA;
     --backgroud-card: #F4F5F7
 
   }
