@@ -20,10 +20,12 @@ import {
   RiShareLine,
 } from "@remixicon/react";
 import { Button } from "../Button";
+import { Circle } from "../Circle";
 
 export function CardProduct() {
   return (
     <Card>
+      <Circle info="new" backgroundColor="" showCircle={true} />
       <CardImageProduct src={syltherine}></CardImageProduct>
       <CardInfoProduct>
         <CardNameProduct>Syltherine</CardNameProduct>

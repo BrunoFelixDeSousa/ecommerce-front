@@ -9,6 +9,8 @@ export const GlobalStyle = createGlobalStyle`
     --color-text-3: #898989;
     --color-text-4: #B0B0B0;
     --color-text-5: #B88E2F;
+    --color-circle-1: #E97171;
+    --color-circle-2: #2EC1AC;
 
     --backgroud-sencodary: #FFF3E3;
     --backgroud-info: #FAF3EA;
