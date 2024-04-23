@@ -1,12 +1,20 @@
 import { Card, CardImage, Text } from "./styles";
 
-import dining from "../../assets/images/dining.png";
+interface Category {
+  id: string;
+  name: string;
+  imageLink: string;
+}
 
-export function CardCategory() {
+interface CardCategoryProps {
+  category: Category;
+}
+
+export function CardCategory({ category }: CardCategoryProps) {
   return (
     <Card href="#">
-      <CardImage src={dining} />
-      <Text>Dining</Text>
+      <CardImage src={category.imageLink} />
+      <Text>{category.name}</Text>
     </Card>
   );
 }
