@@ -17,7 +17,7 @@ export function Categories() {
   useEffect(() => {
     async function fetchCategories() {
       try {
-        const response = await api.get("/category");
+        const response = await api.get("/category/limited");
         // Atualiza o estado com as categorias obtidas da resposta da API
         setCategories(response.data);
       } catch (error) {
