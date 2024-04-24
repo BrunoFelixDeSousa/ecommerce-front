@@ -13,7 +13,6 @@ import {
   //   CardButton,
 } from "./styles";
 
-import syltherine from "../../assets/images/syltherine.png";
 import {
   RiArrowLeftRightLine,
   RiHeartLine,
@@ -22,17 +21,59 @@ import {
 import { Button } from "../Button";
 import { Circle } from "../Circle";
 
-export function CardProduct() {
+interface Product {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  discountPercent: number;
+  isNew: boolean;
+  imageLink: string;
+}
+
+interface CardProductProps {
+  product: Product;
+}
+
+export function CardProduct({ product }: CardProductProps) {
+  const regularPrice = (price: number, discountPercent: number) => {
+    if (discountPercent === null) return null;
+    const result = (price - ((price * discountPercent) / 100));
+    return result.toFixed(2);
+  };
+
+  // Determina se deve mostrar o preço com desconto
+  const hasDiscount = product.discountPercent !== null;
+  console.log(hasDiscount)
+  // Define o valor de CardCashPrice e CardRegularPrice com base no desconto
+  // Se hasDiscount for falso, cardCashPrice recebe o preço do produto e cardRegularPrice recebe null
+  // se hasDiscount for true, cardCashPrice recebe o preço do produto com desconto e cardRegularPrice recebe o valor do produto
+  // trocando as posições
+  const cardCashPrice = hasDiscount
+    ? regularPrice(product.price, product.discountPercent)
+    : product.price;
+  const cardRegularPrice = hasDiscount ? product.price : null;
+
   return (
     <Card>
-      <Circle info="new" backgroundColor="" showCircle={true} />
-      <CardImageProduct src={syltherine}></CardImageProduct>
+      <Circle /*info={product.isNew}*/ info="new" showCircle={product.isNew} />
+      <CardImageProduct src={product.imageLink}></CardImageProduct>
       <CardInfoProduct>
-        <CardNameProduct>Syltherine</CardNameProduct>
-        <CardDescriptionProduct>Stylish cafe chair</CardDescriptionProduct>
+        <CardNameProduct>{product.name}</CardNameProduct>
+        <CardDescriptionProduct>{product.description}</CardDescriptionProduct>
         <CardPrice>
-          <CardCashPrice>R$ 2.500.000</CardCashPrice>
-          <CardRegularPrice>R$ 3.500.000</CardRegularPrice>
+          {/* <CardCashPrice>R$ {product.price}</CardCashPrice>
+          {product.discountPercent !== null? (
+            <CardRegularPrice>
+              R$ {regularPrice(product.price, product.discountPercent)}
+            </CardRegularPrice>
+          ): null} */}
+          {/* Verifa se tem valor de desconto, se true então a posição dos valores são invertidas*/}
+          <CardCashPrice>R${cardCashPrice}</CardCashPrice>
+
+          {hasDiscount ? (
+            <CardRegularPrice>R$ {cardRegularPrice}</CardRegularPrice>
+          ) : null}
         </CardPrice>
       </CardInfoProduct>
       <CardContent>
