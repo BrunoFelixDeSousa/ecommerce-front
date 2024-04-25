@@ -56,7 +56,7 @@ export function CardProduct({ product }: CardProductProps) {
 
   return (
     <Card>
-      <Circle /*info={product.isNew}*/ info="new" showCircle={product.isNew} />
+      <Circle isNew={product.isNew} discountPercent={product.discountPercent} />
       <CardImageProduct src={product.imageLink}></CardImageProduct>
       <CardInfoProduct>
         <CardNameProduct>{product.name}</CardNameProduct>
