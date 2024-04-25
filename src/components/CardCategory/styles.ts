@@ -17,9 +17,9 @@ export const Card = styled.a`
   }
 
   @media (max-width: 768px) {
-    width: 10rem;
-    height: 10rem;
-    padding-bottom: 1rem;
+    /* width: 10rem; */
+    height: 28rem;
+    /* padding-bottom: 1rem; */
   }
 `;
 

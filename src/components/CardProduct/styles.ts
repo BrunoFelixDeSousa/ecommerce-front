@@ -68,6 +68,7 @@ export const CardPrice = styled.div`
   flex-direction: row;
   gap: 1rem;
   align-items: center;
+  justify-content: space-between
 `;
 
 export const CardCashPrice = styled.span`
