@@ -15,7 +15,7 @@ export const Card = styled.div`
     content: "";
     position: absolute;
     width: 17rem;
-    height: 27rem;
+    height: 26rem;
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
   }
@@ -45,19 +45,20 @@ export const CardInfoProduct = styled.div`
 
   display: flex;
   flex-direction: column;
-
-  padding: 0.8rem;
+  justify-content: space-between;
+  padding: 0.5rem;
 
   background-color: var(--backgroud-card);
 `;
 
 export const CardNameProduct = styled.h2`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 600;
+  padding: .1rem;
 `;
 
 export const CardDescriptionProduct = styled.span`
-  font-size: 1rem;
+  font-size: .9rem;
   font-weight: 500;
   color: var(--color-text-3);
 `;

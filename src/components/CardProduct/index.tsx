@@ -44,7 +44,7 @@ export function CardProduct({ product }: CardProductProps) {
 
   // Determina se deve mostrar o preço com desconto
   const hasDiscount = product.discountPercent !== null;
-  console.log(hasDiscount)
+  // console.log(hasDiscount)
   // Define o valor de CardCashPrice e CardRegularPrice com base no desconto
   // Se hasDiscount for falso, cardCashPrice recebe o preço do produto e cardRegularPrice recebe null
   // se hasDiscount for true, cardCashPrice recebe o preço do produto com desconto e cardRegularPrice recebe o valor do produto
@@ -62,12 +62,6 @@ export function CardProduct({ product }: CardProductProps) {
         <CardNameProduct>{product.name}</CardNameProduct>
         <CardDescriptionProduct>{product.description}</CardDescriptionProduct>
         <CardPrice>
-          {/* <CardCashPrice>R$ {product.price}</CardCashPrice>
-          {product.discountPercent !== null? (
-            <CardRegularPrice>
-              R$ {regularPrice(product.price, product.discountPercent)}
-            </CardRegularPrice>
-          ): null} */}
           {/* Verifa se tem valor de desconto, se true então a posição dos valores são invertidas*/}
           <CardCashPrice>R${cardCashPrice}</CardCashPrice>
 
