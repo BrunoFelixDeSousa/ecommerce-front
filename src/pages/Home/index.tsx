@@ -13,7 +13,7 @@ export function Home() {
       <Banner />
       <Main>
         <Categories />
-        <Products />
+        <Products buttonTypes="default" />
       </Main>
       <Info />
       <Footer />

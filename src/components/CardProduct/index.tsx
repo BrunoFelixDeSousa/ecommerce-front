@@ -18,7 +18,7 @@ import {
   RiHeartLine,
   RiShareLine,
 } from "@remixicon/react";
-import { Button } from "../Button";
+import { Button } from "../Button/styles";
 import { Circle } from "../Circle";
 
 interface Product {

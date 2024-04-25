@@ -22,4 +22,6 @@ export const ButtonWithBorder = styled(Button)`
   border: 1px solid var(--color-text-5);
   max-width: 15.313rem;
   width: auto;
+  
+  justify-content: center;
 `;

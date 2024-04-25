@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { ButtonWithBorder } from "../Button";
 import { CardProduct } from "../CardProduct";
 import { Container, ContainerCard, Text } from "./styles";
 import { api } from "../../services/api";
+import { Button } from "../Button";
 
 interface Product {
   id: string;
@@ -14,7 +14,11 @@ interface Product {
   imageLink: string;
 }
 
-export function Products() {
+interface ProductButtonProps {
+  buttonTypes: "default" | "pagination";
+}
+
+export function Products({ buttonTypes }: ProductButtonProps) {
   const [products, setProducts] = useState<Product[]>([]);
 
   useEffect(() => {
@@ -22,7 +26,7 @@ export function Products() {
       try {
         const response = await api.get("/product");
         setProducts(response.data);
-      }catch(error) {
+      } catch (error) {
         console.error("Error fetching products:", error);
       }
     }
@@ -37,17 +41,8 @@ export function Products() {
         {products.map((product) => (
           <CardProduct key={product.id} product={product} />
         ))}
-
-        
-        {/* <CardProduct />
-        <CardProduct />
-        <CardProduct />
-        <CardProduct />
-        <CardProduct />
-        <CardProduct />
-        <CardProduct /> */}
       </ContainerCard>
-        <ButtonWithBorder>See Details</ButtonWithBorder>
+      {buttonTypes === "default" ?  <Button /> : null}
     </Container>
   );
 }
