@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const Container = styled.section`
@@ -42,18 +43,20 @@ export const Page = styled.span`
 `;
 
 export const ContentPage = styled.span`
-display: flex;
-align-items: center;
-justify-content: center;
-gap: .5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 `;
 
-export const ContentPageHome = styled.span`
-    font-size: 1.5rem;
-    font-weight: 500;
+export const ContentPageHome = styled(Link)`
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-header);
 `;
 
-export const ContentPages = styled.span`
+export const ContentPages = styled(Link)`
   font-size: 1.5rem;
   font-weight: 300;
+  color: var(--color-header);
 `;

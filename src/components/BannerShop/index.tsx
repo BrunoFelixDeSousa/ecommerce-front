@@ -17,9 +17,9 @@ export function BannerShop() {
       <Content>
         <Page>Shop</Page>
         <ContentPage>
-          <ContentPageHome>Home</ContentPageHome>
+          <ContentPageHome to="/">Home</ContentPageHome>
           <RiArrowRightSLine />
-          <ContentPages>Shop</ContentPages>
+          <ContentPages to="/shop">Shop</ContentPages>
         </ContentPage>
       </Content>
     </Container>
