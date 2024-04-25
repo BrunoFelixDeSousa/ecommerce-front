@@ -1,16 +1,23 @@
 import { Container, InfoCircle } from "./styles";
 
 interface CircleProps {
-  info: string;
-  backgroundColor?: string;
-  showCircle: boolean;
+  isNew: boolean;
+  discountPercent?: number;
 }
 
-export function Circle({ info, backgroundColor, showCircle }: CircleProps) {
-  const circleColor = info.toLowerCase() === "new" ? "#2EC1AC" : "#E97171";
-  const displayInfo = info.toLowerCase() === "new" ? info : `-${info}%`;
+export function Circle({ isNew, discountPercent }: CircleProps) {
 
-  if (!showCircle) return null;
+  let displayInfo = "";
+
+  if (isNew) {
+    displayInfo = "new";
+  } else if (discountPercent !== undefined) {
+    displayInfo = `-${discountPercent}%`;
+  }
+
+  const circleColor = isNew ? "#2EC1AC" : "#E97171";
+
+  if (!isNew && !discountPercent) return null;
 
   return (
     <Container style={{ backgroundColor: circleColor }}>
