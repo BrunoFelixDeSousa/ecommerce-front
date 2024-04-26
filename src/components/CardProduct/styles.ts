@@ -96,6 +96,9 @@ export const CardContent = styled.div`
   color: white;
   opacity: 0;
   transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
 `;
 
 // export const CardButton = styled.button`
