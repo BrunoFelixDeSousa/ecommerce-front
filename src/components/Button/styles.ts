@@ -1,6 +1,7 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-export const Button = styled.button`
+export const Button = styled(Link)`
   background-color: var(--background);
   color: var(--color-text-5);
   border: none;

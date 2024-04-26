@@ -36,9 +36,11 @@ interface CardProductProps {
 }
 
 export function CardProduct({ product }: CardProductProps) {
+
+
   const regularPrice = (price: number, discountPercent: number) => {
     if (discountPercent === null) return null;
-    const result = (price - ((price * discountPercent) / 100));
+    const result = price - (price * discountPercent) / 100;
     return result.toFixed(2);
   };
 
@@ -72,7 +74,9 @@ export function CardProduct({ product }: CardProductProps) {
       </CardInfoProduct>
       <CardContent>
         {/* <CardButton>See Details</CardButton> */}
-        <Button>See Details</Button>
+        <Button to="">
+          See Details
+        </Button>
         <CardLinks>
           <CardLink href="#">
             <RiShareLine />

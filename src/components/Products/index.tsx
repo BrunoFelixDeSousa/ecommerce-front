@@ -23,8 +23,10 @@ export function Products({ buttonTypes }: ProductButtonProps) {
 
   useEffect(() => {
     async function fetchProducts() {
+      const isLimit = buttonTypes === "default" ? "limited" : "";
+
       try {
-        const response = await api.get("/product");
+        const response = await api.get(`/product/${isLimit}`);
         setProducts(response.data);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -32,7 +34,7 @@ export function Products({ buttonTypes }: ProductButtonProps) {
     }
 
     fetchProducts();
-  }, []);
+  }, [buttonTypes]);
 
   return (
     <Container>

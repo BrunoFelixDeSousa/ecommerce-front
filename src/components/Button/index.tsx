@@ -1,5 +1,5 @@
 import { ButtonWithBorder } from "./styles";
 
 export function Button() {
-    return <ButtonWithBorder>See Details</ButtonWithBorder>;
+    return <ButtonWithBorder to="/shop" >See Details</ButtonWithBorder>;
 }
