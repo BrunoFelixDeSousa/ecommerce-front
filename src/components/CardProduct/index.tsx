@@ -74,7 +74,7 @@ export function CardProduct({ product }: CardProductProps) {
       </CardInfoProduct>
       <CardContent>
         {/* <CardButton>See Details</CardButton> */}
-        <Button to="">
+        <Button to={`/shop/${product.id}`}>
           See Details
         </Button>
         <CardLinks>
