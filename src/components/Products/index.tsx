@@ -38,13 +38,14 @@ export function Products({ buttonTypes }: ProductButtonProps) {
 
   return (
     <Container>
-      <Text>Our Products</Text>
+      {buttonTypes === "default" ? <Text>Our Products</Text> : null}
+
       <ContainerCard>
         {products.map((product) => (
           <CardProduct key={product.id} product={product} />
         ))}
       </ContainerCard>
-      {buttonTypes === "default" ?  <Button /> : null}
+      {buttonTypes === "default" ? <Button /> : null}
     </Container>
   );
 }
