@@ -4,8 +4,8 @@ export const Container = styled.section`
   max-width: 100%;
   height: 6rem;
   margin-bottom: 3rem;
-  padding-left: 10rem;
-  padding-right: 10rem;
+  padding-left: 9rem;
+  padding-right: 9rem;
 
   display: flex;
   justify-content: space-between;
@@ -44,6 +44,11 @@ export const ContainerFilter = styled.div`
     margin-left: 1rem;
     padding-left: 2rem;
     border-left: 2px solid var(--color-text-3);
+
+    p {
+      font-size: 1rem;
+      font-weight: 400;
+    }
   }
 
   @media (max-width: 768px) {
@@ -63,6 +68,7 @@ export const ContainerInfo = styled.div`
   align-items: center;
   gap: 1rem;
   padding-bottom: 1rem;
+  padding: 1rem;
 
   select {
     appearance: none;
