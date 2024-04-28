@@ -2,7 +2,13 @@ import { RiApps2Fill, RiEqualizerLine } from "@remixicon/react";
 import { Container, ContainerFilter, ContainerInfo, Icon } from "./styles";
 import filter from "../../assets/svg/filter.svg";
 
-export function Filter() {
+interface FilterProps {
+  resultsStart: number;
+  resultsEnd: number;
+  totalResults: number;
+}
+
+export function Filter({ resultsStart, resultsEnd, totalResults }: FilterProps) {
   return (
     <Container>
       <ContainerFilter>
@@ -16,7 +22,9 @@ export function Filter() {
           <Icon src={filter} />{" "}
         </a>
         <div>
-          <p>Showing 1–16 of 32 results</p>
+          <p>
+            Showing {resultsStart}–{resultsEnd} of {totalResults} results
+          </p>
         </div>
       </ContainerFilter>
 
