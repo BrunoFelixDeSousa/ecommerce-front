@@ -9,6 +9,20 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: center;
 
+  div {
+    button {
+      width: 6.25rem;
+      height: 3.75rem;
+      margin: 1rem;
+      background-color: #F9F1E7;
+      border: none;
+
+      font-size: 1rem;
+      font-weight: 500;
+;
+    }
+  }
+
   @media (max-width: 768px) {
     margin: 2rem auto 1rem;
   }
