@@ -20,21 +20,46 @@ interface ProductButtonProps {
 
 export function Products({ buttonTypes }: ProductButtonProps) {
   const [products, setProducts] = useState<Product[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);        // Estado para controlar a página atual
+  const [totalPages, setTotalPages] = useState(1);          // Estado para armazenar o total de páginas
+
+  const pageSize = 16; // Tamanho da página
+
+  // V1
+  // useEffect(() => {
+  //   async function fetchProducts() {
+  //     const isLimit = buttonTypes === "default" ? "limited" : "";
+
+  //     try {
+  //       const response = await api.get(`/product/${isLimit}`);
+  //       setProducts(response.data);
+  //     } catch (error) {
+  //       console.error("Error fetching products:", error);
+  //     }
+  //   }
+
+  //   fetchProducts();
+
+  // }, [buttonTypes]);
 
   useEffect(() => {
     async function fetchProducts() {
-      const isLimit = buttonTypes === "default" ? "limited" : "";
-
       try {
-        const response = await api.get(`/product/${isLimit}`);
-        setProducts(response.data);
+        const response = await api.get(`/product`, {
+          params: {
+            page: currentPage.toString(),
+            pageSize: pageSize.toString(),
+          },
+        });
+        setProducts(response.data.products);             // Atualizar os produtos com os dados recebidos da API
+        setTotalPages(response.data.totalPage);
       } catch (error) {
         console.error("Error fetching products:", error);
       }
     }
 
     fetchProducts();
-  }, [buttonTypes]);
+  }, [currentPage]);
 
   return (
     <Container>
@@ -46,6 +71,25 @@ export function Products({ buttonTypes }: ProductButtonProps) {
         ))}
       </ContainerCard>
       {buttonTypes === "default" ? <Button /> : null}
+
+      {buttonTypes === "pagination" ? (
+        <div>
+          <button
+            onClick={() =>
+              setCurrentPage((prevPage) => Math.max(prevPage - 1, 1))
+            }
+            disabled={currentPage === 1}
+          >
+            Previous
+          </button>
+          <button
+            onClick={() => setCurrentPage((prevPage) => prevPage + 1)}
+            disabled={currentPage === totalPages}
+          >
+            Next
+          </button>
+        </div>
+      ) : null}
     </Container>
   );
 }
