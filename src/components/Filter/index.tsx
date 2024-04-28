@@ -6,9 +6,17 @@ interface FilterProps {
   resultsStart: number;
   resultsEnd: number;
   totalResults: number;
+  setPageSize: React.Dispatch<React.SetStateAction<number>>;
+  pageSize: number;
 }
 
-export function Filter({ resultsStart, resultsEnd, totalResults }: FilterProps) {
+export function Filter({
+  resultsStart,
+  resultsEnd,
+  totalResults,
+  pageSize,
+  setPageSize,
+}: FilterProps) {
   return (
     <Container>
       <ContainerFilter>
@@ -30,10 +38,15 @@ export function Filter({ resultsStart, resultsEnd, totalResults }: FilterProps) 
 
       <ContainerInfo>
         Show
-        <select name="show">
+        <select
+          name="show"
+          value={pageSize}
+          onChange={(e) => setPageSize(Number(e.target.value))}
+        >
           <option value="16">16</option>
           <option value="20">20</option>
           <option value="24">24</option>
+          <option value="30">30</option>
         </select>
         Short by
         <select name="short">

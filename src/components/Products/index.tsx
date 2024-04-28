@@ -28,8 +28,9 @@ export function Products({ buttonTypes }: ProductButtonProps) {
   const [resultsStart, setResultsStart] = useState(0);
   const [resultsEnd, setResultsEnd] = useState(0);
   const [totalResults, setTotalResults] = useState(0);
+  const [pageSize, setPageSize] = useState(16)
 
-  const pageSize = 16; // Tamanho da página
+  // const pageSize = 16; // Tamanho da página
 
   useEffect(() => {
     async function fetchProducts() {
@@ -50,14 +51,14 @@ export function Products({ buttonTypes }: ProductButtonProps) {
         setResultsStart(start);
         setResultsEnd(end);
         setTotalResults(response.data.total);
-        
+
       } catch (error) {
         console.error("Error fetching products:", error);
       }
     }
 
     fetchProducts();
-  }, [currentPage, totalResults]);
+  }, [currentPage, totalResults, pageSize]);
 
   return (
     <>
@@ -66,6 +67,8 @@ export function Products({ buttonTypes }: ProductButtonProps) {
           resultsStart={resultsStart}
           resultsEnd={resultsEnd}
           totalResults={totalResults}
+          pageSize={pageSize}
+          setPageSize={setPageSize}
         />
       ) : null}
       <Container>
