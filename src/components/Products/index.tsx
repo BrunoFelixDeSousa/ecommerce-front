@@ -30,6 +30,9 @@ export function Products({ buttonTypes }: ProductButtonProps) {
   const [totalResults, setTotalResults] = useState(0);
   const [pageSize, setPageSize] = useState(16)
 
+  // Estado para organizar produtos
+  const [sortBy, setSortBy] = useState("default");
+
   // const pageSize = 16; // Tamanho da página
 
   useEffect(() => {
@@ -39,6 +42,7 @@ export function Products({ buttonTypes }: ProductButtonProps) {
           params: {
             page: currentPage.toString(),
             pageSize: pageSize.toString(),
+            sortBy: sortBy
           },
         });
         setProducts(response.data.products); // Atualizar os produtos com os dados recebidos da API
@@ -58,7 +62,7 @@ export function Products({ buttonTypes }: ProductButtonProps) {
     }
 
     fetchProducts();
-  }, [currentPage, totalResults, pageSize]);
+  }, [currentPage, totalResults, pageSize, sortBy]);
 
   return (
     <>
@@ -69,6 +73,8 @@ export function Products({ buttonTypes }: ProductButtonProps) {
           totalResults={totalResults}
           pageSize={pageSize}
           setPageSize={setPageSize}
+          sortBy={sortBy}
+          setSortBy={setSortBy}
         />
       ) : null}
       <Container>

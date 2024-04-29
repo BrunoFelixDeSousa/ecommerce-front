@@ -8,6 +8,8 @@ interface FilterProps {
   totalResults: number;
   setPageSize: React.Dispatch<React.SetStateAction<number>>;
   pageSize: number;
+  sortBy: string;
+  setSortBy: React.Dispatch<React.SetStateAction<string>>;
 }
 
 export function Filter({
@@ -16,6 +18,8 @@ export function Filter({
   totalResults,
   pageSize,
   setPageSize,
+  sortBy,
+  setSortBy
 }: FilterProps) {
   return (
     <Container>
@@ -49,10 +53,14 @@ export function Filter({
           <option value="30">30</option>
         </select>
         Short by
-        <select name="short">
+        <select
+          name="short"
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
+        >
           <option value="default">Default</option>
           <option value="price">Price</option>
-          <option value="new">New</option>
+          <option value="isNew">New</option>
         </select>
       </ContainerInfo>
     </Container>
