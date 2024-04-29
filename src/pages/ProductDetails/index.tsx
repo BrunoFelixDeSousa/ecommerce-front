@@ -32,6 +32,16 @@ import {
   DescriptionTitle,
   AddInformationTitle,
   Description,
+  ContainerRelatedProducts,
+  Title,
+  CardImageProduct,
+  CardInfoProduct,
+  CardNameProduct,
+  CardDescriptionProduct,
+  CardPrice,
+  CardCashPrice,
+  CardRegularPrice,
+  Cards,
 } from "./styles";
 import {
   RiArrowRightSLine,
@@ -42,6 +52,10 @@ import {
   RiTwitterXFill,
 } from "@remixicon/react";
 import { Footer } from "../../components/Footer";
+import { Card } from "../../components/CardProduct/styles";
+// provisório --------------
+import syltherine from '../../assets/images/syltherine.png';
+import { Button } from "../../components/Button";
 
 interface Product {
   id: string;
@@ -200,6 +214,66 @@ export function ProductDetails() {
           travel.
         </Description>
       </ProductDescription>
+      <ContainerRelatedProducts>
+        <Title>Related Products</Title>
+
+        {/* Provisório */}
+        <Cards>
+          <Card>
+            <CardImageProduct src={syltherine}></CardImageProduct>
+            <CardInfoProduct>
+              <CardNameProduct>Syltherine</CardNameProduct>
+              <CardDescriptionProduct>
+                Stylish cafe chair
+              </CardDescriptionProduct>
+              <CardPrice>
+                <CardCashPrice>R$ 2.500.000</CardCashPrice>
+                <CardRegularPrice>R$ 3.500.000</CardRegularPrice>
+              </CardPrice>
+            </CardInfoProduct>
+          </Card>
+          <Card>
+            <CardImageProduct src={syltherine}></CardImageProduct>
+            <CardInfoProduct>
+              <CardNameProduct>Syltherine</CardNameProduct>
+              <CardDescriptionProduct>
+                Stylish cafe chair
+              </CardDescriptionProduct>
+              <CardPrice>
+                <CardCashPrice>R$ 2.500.000</CardCashPrice>
+                <CardRegularPrice>R$ 3.500.000</CardRegularPrice>
+              </CardPrice>
+            </CardInfoProduct>
+          </Card>
+          <Card>
+            <CardImageProduct src={syltherine}></CardImageProduct>
+            <CardInfoProduct>
+              <CardNameProduct>Syltherine</CardNameProduct>
+              <CardDescriptionProduct>
+                Stylish cafe chair
+              </CardDescriptionProduct>
+              <CardPrice>
+                <CardCashPrice>R$ 2.500.000</CardCashPrice>
+                <CardRegularPrice>R$ 3.500.000</CardRegularPrice>
+              </CardPrice>
+            </CardInfoProduct>
+          </Card>
+          <Card>
+            <CardImageProduct src={syltherine}></CardImageProduct>
+            <CardInfoProduct>
+              <CardNameProduct>Syltherine</CardNameProduct>
+              <CardDescriptionProduct>
+                Stylish cafe chair
+              </CardDescriptionProduct>
+              <CardPrice>
+                <CardCashPrice>R$ 2.500.000</CardCashPrice>
+                <CardRegularPrice>R$ 3.500.000</CardRegularPrice>
+              </CardPrice>
+            </CardInfoProduct>
+          </Card>
+        </Cards>
+        <Button />
+      </ContainerRelatedProducts>
       <Footer />
     </>
   );
